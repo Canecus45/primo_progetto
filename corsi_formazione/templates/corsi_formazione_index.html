@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{%block title%} {{block.super}} Index {%endblock title%}
+{% block content %}
+<h1>Benvenuto nella lista di gestione dei corsi di Formazione</h1>
+<ul>
+    <li><a href="lista_corsi.html">Lista corsi</a></li>
+    <li><a href="dettagli_corsi.html">Dettagli corsi</a></li>
+    <li><a href="corsi_dopo.html">Corsi dopo 01/05/2025</a></li>
+    <li><a href="corsi_meno_posti.html">Corsi con meno di 20 posti</a></li>
+    <li><a href="corsi_terminano_entro.html"></a>Corsi che terminano entro 30/04/2025</li>
+    <li><a href="statistiche_avanzate.html"></a>Statistiche avanzate sui corsi</li>
+</ul>
+{% endblock content %}

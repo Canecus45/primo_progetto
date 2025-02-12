@@ -1,0 +1,21 @@
+{% extends "base.html"%}
+{%block title%} {{block.super}} | Lista corsi {%endblock title%}
+
+{%block content%}
+<h4>Lista corsi: </h4>
+
+{% if corsi %}
+    {% for corso in corsi%}
+        <p><strong>Titolo: </strong><a href="/corsi_formazione/corsi/{{corso.id}}"> {{corso.titolo}} </a></p>
+        <hr>
+        <p><strong>Descrizione: </strong> {{corso.descrizione}} </p>
+        <hr>
+        <p><strong>Data inizio: </strong> {{corso.data_inizio}} </a></p>
+        <hr>
+        <p><strong>Data fine: </strong> {{corso.data_fine}} </a></p>
+        <hr>
+        <p><strong>Posti: </strong> {{corso.posti}} </a></p>
+    {% endfor %}
+{%endif%}
+
+{%endblock content%}

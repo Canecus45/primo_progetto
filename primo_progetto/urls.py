@@ -24,5 +24,6 @@ urlpatterns = [
     path("", index_root, name="index_root"),
     path("prima_app/", include("prima_app.urls", namespace="prima_app")),
     path("seconda_app/", include("seconda_app.urls", namespace="seconda_app")),
-    path("news",include("news.urls",namespace="news"))
+    path("news",include("news.urls",namespace="news")),
+    path("corsi_formazione",include("corsi_formazione.urls",namespace="corsi_formazione")),
 ]
