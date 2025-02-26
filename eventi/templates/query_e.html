@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+{%block title%} Eventi | Query e {%endblock title%}
+
+{%block content%}
+    <h3>Eventi:</h3>
+    <br>
+    <ul>
+        {% for evento in query_d %}
+            <li>{{evento.titolo}}- {{evento.data_fine}}</li>
+        {% endfor %}
+    </ul>
+{%endblock content%}
