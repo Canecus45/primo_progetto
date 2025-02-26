@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}
+index
+{% endblock title %}
+{% block content %}
+    <h4></h4>
+
+    <p>Benvenuto nella piattaforma di en</p>
+    <ol>
+    <li><a href="{% url 'eventi:query_a'%}">Lista eventi</a></li>
+    <li><a href="{% url 'eventi:query_b'%}">Dettagli eventi</a></li>
+    <li><a href="{% url 'eventi:query_c'%}">Eventi 01/06/2025</a></li>
+    <li><a href="{% url 'eventi:query_d'%}">Eventi con meno di 80 posti</a></li>
+    <li><a href="{% url 'eventi:query_e'%}">Eventi che terminao entro il 31/05/2025</a></li>
+    <li><a href="{% url 'eventi:query_f'%}">Statistiche eventi</a></li>
+
+    </ol>
+
+{% endblock content %}

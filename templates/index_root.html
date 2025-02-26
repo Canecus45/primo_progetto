@@ -1,17 +1,16 @@
-<!DOCTYPE html>
-<html lang="it">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Index root</title>
-    </head>
-    <body>
-        <a href="/admin">Pannello admin</a>
-        <br>
-        <a href="{% url 'prima_app:index'%}">Prima app</a>
-        <br>
-        <a href="{% url 'seconda_app:index2'%}">Seconda app</a>
-        <br>
-        <a href="{% url 'corsi_formazione:corsi_formazione_index'%}">Corsi Formazione</a>
-    </body>
-</html>
+{% extends "base.html"%}
+{%block title%} {{block.super}} | Index {%endblock title%}
+
+ {%block content%}
+ <h1>PRIMO PROGETTO - ROOT MENU'</h1>
+ <ol>
+     <li><a href="/admin">Pannello admin</a></li>
+     <li><a href="{% url 'prima_app:index'%}">Index prima app</a></li>
+     <li><a href="{% url 'seconda_app:index'%}">Index seconda app</a></li>
+     <li><a href="{% url 'news:index'%}">Index news</a></li>
+     <li><a href="{% url 'voti:index'%}">Index voti</a></li>
+     <li><a href="{% url 'eventi:index'%}">Index eventi</a></li>
+     <li><a href="{% url 'corsi_formazione:index'%}">Index corsi</a></li>
+     <li><a href="{% url 'eventi:index_eventi'%}">Index eventi</a></li>
+ </ol>
+ {%endblock content%}
